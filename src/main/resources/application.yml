@@ -18,4 +18,4 @@ spring:
     open-in-view: false
     show-sql: true
     hibernate:
-      ddl-auto: update #처음생성 시 create로 설정
+      ddl-auto: create #처음생성 시 create로 설정
