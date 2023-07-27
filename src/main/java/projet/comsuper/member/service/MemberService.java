@@ -36,7 +36,7 @@ public class MemberService {
      */
     public MemberDTO login(MemberDTO memberDTO) {
         //1. 회원이 입력한 이메일로 DB에서 조회함
-        Optional<MemberEntity> byMemberEmail = memberRepository.findByMemberEmail(memberDTO.getEmail());
+        Optional<MemberEntity> byMemberEmail = memberRepository.findByEmail(memberDTO.getEmail());
 
         if(byMemberEmail.isPresent()) {
             //해당 이메일을 가진 회원 정보가 있다
@@ -96,7 +96,7 @@ public class MemberService {
      * @return
      */
     public MemberDTO updateForm(String memberEmail) {
-        Optional<MemberEntity> optionalMemberEntity = memberRepository.findByMemberEmail(memberEmail);
+        Optional<MemberEntity> optionalMemberEntity = memberRepository.findByEmail(memberEmail);
         if(optionalMemberEntity.isPresent()) {
             return MemberDTO.toMemberDTO(optionalMemberEntity.get());
         } else {
