@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,9 @@
 </head>
 
 <body>
+session 값 확인 : <p th:text="${session.loginEmail}"></p>
+<!--<a href="/member/update">내정보</a>-->
+<!--<a href="/member/logout">로그아웃</a>-->
 <header>
     <div class="logo">
         <img src="./assets/Vector 1.svg" alt="Logo" />
