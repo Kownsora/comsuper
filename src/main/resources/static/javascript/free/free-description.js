@@ -60,13 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const writeBtn = document.getElementById("write-btn");
     writeBtn.addEventListener("click", function () {
         // 글쓰기 페이지로 이동
-        window.location.href = "./free/free-write.html";
+        window.location.href = "free/free-write.html";
     });
 
     // 목록 버튼 클릭 이벤트 리스너
     const listBtn = document.getElementById("list-btn");
     listBtn.addEventListener("click", function () {
         // 목록 페이지로 이동
-        window.location.href = "./free/free-list.html";
+        window.location.href = "free/free-list.html";
     });
 });
