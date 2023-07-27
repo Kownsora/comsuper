@@ -1,61 +1,170 @@
-/* notice; 해당 공간 영역 */
-.notice-space {
-    display: flex;
-    justify-content: space-between;
-    flex-shrink: 0;
+/* 기본 스타일 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* notice; 해당 폰트 영역 */
-.notice-font {
-    padding-left: 180px;
-    padding-top: 40px;
-    position: inherit;
-    color: #000;
-    font-family: Noto Sans KR;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+body {
+  font-family: Noto Sans KR;
 }
 
-/* 검색 영역 부분 */
-.notice-search {
-    width: 5px;
-    height: 5px;
-    padding-right: 340px;
-    padding-top: 80px;
-    position: inherit;
-    color: #000;
-    font-family: Noto Sans KR;
-    /* font-size: 48px; */
-    font-style: normal;
-    line-height: normal;
+/* 헤더 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(16px);
+  padding: 10px 20px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Noto Sans KR;
 }
 
-/* 상단 제목, 글쓴이 바 영역 */
-.notice-list-bar {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding-top: 30px;
+.logo img {
+  max-height: 50px;
+  cursor: pointer;
 }
 
-/* 목록 라인 부분 */
-.notice-line {
-    padding: 15px;
-    margin: 15px;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    list-style-type: none;
+.top-menu ul {
+  list-style: none;
 }
 
+.top-menu li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.top-menu li:last-child {
+  margin-right: 0;
+}
+
+.top-menu-notice {
+  color: #9440ff;
+  cursor: pointer;
+}
+
+.top-menu-board {
+  color: white;
+  cursor: pointer;
+}
+.top-menu-logout {
+  color: white;
+  cursor: pointer;
+}
+
+/* 메인 게시판 */
+main {
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column; /* 각 게시글을 세로 방향으로 배치 */
+}
+
+.notice {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.notice-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(151, 151, 151, 0.2);
+  padding: 10px 30px 10px 20px;
+  margin: 10px 20px 0px 20px;
+}
+
+.notice-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* 각 요소들을 동일한 간격으로 배치 */
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+  padding: 10px 30px 20px 30px;
+}
+
+/* 하단 부분 */
+
+.page-link {
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* 버튼 */
 /* 글쓰기 버튼 부분 */
-.btn-write {
-    padding-right: 120px;
-    float: right;
-    align-content: space-between;
-    background: none;
-    border: none;
-    cursor: pointer;
+.write-button {
+  padding-right: 120px;
+  float: right;
+  align-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* 그림자 효과 */
+.write-button::after {
+  content: ""; /* 가상 요소 생성 */
+  position: absolute; /* 절대 위치 설정 */
+  top: 50%; /* 버튼의 중앙에 그림자 위치 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px; /* 그림자 크기 */
+  height: 20px;
+  box-shadow: 2px 2px 5px rgba(164, 13, 194, 0.3); /* 그림자 스타일 */
+  border-radius: 50%; /* 원형 그림자로 보이도록 설정 */
+  opacity: 0; /* 초기에는 그림자가 보이지 않음 */
+  transition: opacity 0.2s ease-in-out; /* 그림자 표시/비표시 애니메이션 설정 */
+}
+
+/* 마우스 오버시 그림자 효과 보이도록 설정 */
+.write-button:hover::after {
+  opacity: 5;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px 10px 10px;
+  background-color: #f0f0f0;
+  padding: 5px;
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.prev-button,
+.next-button {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: #9440ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: blueviolet;
+}
+
+.write-button-area {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  border: none;
 }

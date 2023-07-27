@@ -1,0 +1,137 @@
+/* 기본 스타일 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Noto Sans KR;
+}
+
+/* 헤더 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(16px);
+  padding: 10px 20px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Noto Sans KR;
+}
+
+.logo img {
+  max-height: 50px;
+  cursor: pointer;
+}
+
+.top-menu ul {
+  list-style: none;
+}
+
+.top-menu li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.top-menu li:last-child {
+  margin-right: 0;
+}
+
+.top-menu-notice {
+  color: #9440ff;
+  cursor: pointer;
+}
+
+.top-menu-board {
+  color: white;
+  cursor: pointer;
+}
+.top-menu-logout {
+  color: white;
+  cursor: pointer;
+}
+
+/* 메인 게시판 */
+main {
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column; /* 각 게시글을 세로 방향으로 배치 */
+}
+
+.notice {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+/* 제목 작성일자 글쓴이 라인만들기 */
+.notice-page {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(61, 61, 61, 0.2);
+  padding: 20px 40px;
+}
+
+.notice-page__title {
+  padding: 0px 20px 0px 20px;
+  font-weight: bold;
+}
+
+.notice-page__date {
+  padding: 0px 20px 0px 20px;
+  font-weight: bold;
+}
+
+.notice-page__user {
+  padding: 0px 20px 0px 20px;
+  font-weight: bold;
+}
+
+.notice-page__image {
+  padding: 0px 20px 0px 20px;
+}
+
+.notice-page__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(61, 61, 61, 0.2);
+  padding: 20px;
+  margin: 20px;
+  white-space: pre-wrap;
+}
+
+#post-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* footer 영역 */
+footer {
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  align-content: flex-end;
+}
+
+/* 목록, 수정 삭제 , 글쓰기 영역 */
+.notice-modify-btn {
+  padding: 10px 20px;
+  background-color: gray;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.notice-modify-btn:hover {
+  background-color: #9440ff;
+}
