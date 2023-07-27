@@ -1,0 +1,20 @@
+server:
+  port:8080
+
+#database 연동 설정
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/comsuper5?serverTimezone=Asia/Seoul&characterEncoding=UTF-8  #내가 만든 데이터베이스 comsuper5
+    username: admin #내가만든 데이터베이스 유저명
+    password: 1111  #내가 만든 데이터베이스 비밀번호
+  thymeleaf:
+    cache: false
+
+  #spring data jpa 설정
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update #처음생성 시 create로 설정
