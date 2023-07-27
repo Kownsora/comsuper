@@ -1,4 +1,4 @@
-package projet.comsuper.notice;
+package projet.comsuper.notice.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
