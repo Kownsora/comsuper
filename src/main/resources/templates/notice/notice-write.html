@@ -1,86 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>.COMSUPER5;</title>
-    <link rel="stylesheet" href="css/notice/up-bar.css" />
-    <link rel="stylesheet" href="css/notice/notice-write.css" />
-</head>
+    <link rel="stylesheet" href="css/notice-write.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./assets/Vector 1.svg" alt="Logo" />
+        <img src="./assets/Logo.svg" alt="Logo" />
+      </div>
+      <nav class="top-menu">
+        <ul>
+          <li class="top-menu-board">Board;</li>
+          <li class="top-menu-notice">Notice;</li>
+          <li class="top-menu-logout">Log_Out;</li>
+        </ul>
+      </nav>
+    </header>
 
-<!-- 꾸미기 시작 -->
-<body>
-<header>
-    <div class="up-bar" alt="">
-        <button class="bar-btn up-bar-logo">
-            <img src="./assets/up-bar-logo.svg" alt="" />
-        </button>
-        <div class="up-bar-menu" alt="">
-            <button class="bar-btn up-bar-menu-board">
-                <img src="./assets/up-bar-menu-board.svg" alt="" />
-            </button>
-            <div class="up-bar-boundary-value" alt="">
-                <img src="./assets/up-bar-boundary-value.svg" />
-            </div>
-            <button class="bar-btn up-bar-menu-notice">
-                <img src="./assets/up-bar-menu-notice.svg" alt="" />
-            </button>
-            <div class="up-bar-boundary-value" alt="">
-                <img src="./assets/up-bar-boundary-value.svg" />
-            </div>
-            <button class="bar-btn up-bar-menu-logout">
-                <img src="./assets/up-bar-menu-logout.svg" alt="" />
-            </button>
+    <main>
+      <h1>Notice_Write;</h1>
+      <div class="form-group">
+        <div class="title">
+          <label for="title">제목</label>
+          <button id="submit-button">등록</button>
         </div>
-    </div>
-</header>
-
-<main>
-    <!-- notice_writr; 타이틀 -->
-    <div class="notice-write-font" alt="">
-        <img src="assets/notice-write-font.svg" />
-    </div>
-    <!-- 글쓰기 영역 & 백그라운드 이미지 추가 -->
-    <div class="notice-write-space" alt="">
-        <img src="assets/notice-write-background.svg" alt="" />
-        <div class="notice-write-area" alt="">
-            <!-- 제목 작성 구간 & 등록버튼 -->
-            <div class="notice-title" alt="">
-                <div>
-                    <div class="notice-text" alt="">
-                        <img src="./assets/notice-write-title.svg" />
-                    </div>
-                </div>
-                <div class="notice-text-icons" alt="">
-                    <button class="notice-title-btn" alt="">
-                        <img src="./assets/btn-notice-write-submit.svg" alt="" />
-                    </button>
-                </div>
-            </div>
-
-            <!-- 내용 타이틀 영역 -->
-            <div class="notice-title-write-area" alt="">
-                <input type="text" name="notice-title-write" submmit="" />
-            </div>
-            <!-- 내용 입력 영역 && 이미지 삽입 아이콘, 텍스트 아이콘 -->
-            <div class="notice-text-titile" alt="">
-                <div>
-                    <div class="notice-text" alt="">
-                        <img src="./assets/notice-write-text.svg" />
-                    </div>
-                </div>
-                <div class="notice-text-icons" alt="">
-                    <!-- <input type="file" bind:files id="image" name="" /> -->
-                    <img src="./assets/notice-image.svg" />
-                    <img src="./assets/notice-text-img.svg" />
-                </div>
-            </div>
-            <!-- 텍스트 입력 영역 -->
-            <div class="text-write-area" alt="">
-                <input type="text" name="text-write-area" submmit="" />
-            </div>
+        <input type="text" id="title" name="title" required />
+      </div>
+      <div class="form-group2">
+        <div class="content">
+          <label for="content">내용</label>
+          <input type="file" id="image" name="image" />
         </div>
-    </div>
-</main>
-</body>
+        <textarea id="content" name="content" rows="20" required></textarea>
+        <div class="image-preview">
+          <img id="preview-image" />
+      </div>
+    </main>
+    <script src="notice-list.js"></script>
+    <script src="notice-write.js"></script>
+    <script src="menu-move.js"></script>
+  </body>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.COMSUPER5;</title>
+    <link rel="stylesheet" href="css/notice-content.css" />
+
+  </head>
+
+  <!-- 헤더 영역-->
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./assets/Vector 1.svg" alt="Logo" />
+        <img src="./assets/Logo.svg" alt="Logo" />
+      </div>
+      <nav class="top-menu">
+        <ul>
+          <li class="top-menu-board" href="board-list.html">Board;</a>
+          <li class="top-menu-notice" href = "notice-list.html">Notice;</li>
+            <!-- 로그아웃의 경우 단순 버튼 이동동작으로 처리 할 수 없어냅둠... -->
+          <li class="top-menu-logout">Log_Out;</li> 
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 메인부분 시작 -->
+    <main>
+      <div class="notice">
+        <h1>Notice;</h1>
+      </div>
+      <div class="notice-page">
+        <div class="notice-page__title">제목</div>
+        <span id="items-title"></span>
+      </div>
+      <div class="notice-page">
+        <div class="notice-page__date">날짜</div>
+        <span id="items-date"></span>
+      </div>
+      <div class="notice-page">
+        <div class="notice-page__user">글쓴이</div>
+        <span id="items-written">user를 알 수 없습니다.</span>
+      </div>
+      <div class="notice-page__image">
+        <img id="items-image" src="" alt="" />
+      </div>
+      <div class="notice-page__text">
+        <div id="items-content">게시글이 등록되지 않았습니다.</div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="notice-modify-btn__list">
+        <button class="notice-modify-btn" id="list-btn">목록</button>
+        <button class="notice-modify-btn" id="modify-btn">수정</button>
+        <button class="notice-modify-btn" id="delete-btn">삭제</button>
+        <button class="notice-modify-btn" id="write-btn">글쓰기</button>
+      </div>
+    </footer>
+    <script src="notice-list.js"></script>
+    <script src="notice-content.js"></script>
+    <script src="notice-edit.js"></script>
+    <script src="menu-move.js"></script>
+  </body>
+</html>
