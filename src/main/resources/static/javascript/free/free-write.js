@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // 등록 버튼 클릭 이벤트 리스너
         submitButton.addEventListener("click", function () {
             // 등록 페이지로 이동
-            window.location.href = "free-list.html";
+            window.location.href = "/board/save";
         });
 
         if (!title || !content) {
@@ -57,12 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
         imageInput.value = ""; // 이미지 업로드 인풋 초기화
 
         // free-list.html로 이동
-        window.location.href = "free-list.html";
+        window.location.href = "/board/list";
     });
 
     // 글쓰기 버튼 클릭 이벤트 리스너
     writeButton.addEventListener("click", function () {
         // 글쓰기 페이지로 이동
-        window.location.href = "write-list.html";
+        window.location.href = "/board/save";
     });
 });

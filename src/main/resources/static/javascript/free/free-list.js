@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 글쓰기 버튼 클릭 이벤트 리스너
     writeButton.addEventListener("click", function () {
         // 글쓰기 페이지로 이동
-        window.location.href = "free-write.html";
+        window.location.href = "/board/save";
     });
 
     // 로컬스토리지에서 저장된 게시글 데이터 가져오기
