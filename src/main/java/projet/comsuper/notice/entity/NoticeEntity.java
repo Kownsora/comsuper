@@ -3,8 +3,6 @@ package projet.comsuper.notice.entity;
 import lombok.Getter;
 import lombok.Setter;
 import projet.comsuper.notice.dto.NoticeDTO;
-import projet.comsuper.notice.entity.BaseEntity;
-import projet.comsuper.notice.entity.NoticeFileEntity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
